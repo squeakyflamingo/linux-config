@@ -18,13 +18,13 @@ directory_up() {
     done
 }
 
-add_alias() {
+add-alias() {
     name="$1"
     shift 1;
     echo alias $name=\"$*\" >> ~/.bash_aliases
 }
 
-save_bash_aliases() {
+save-bash-aliases() {
     if [ -d ~/git/linux-config/ ]; 
         then cp ~/.bash_aliases ~/git/linux-config/.bash_aliases;
         else cp ~/.bash_aliases ~/bash_custom;
@@ -44,19 +44,20 @@ alias dd='dd status=progress'
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
+
+## useful
 alias _='sudo'
 alias _i='sudo -i'
 alias fuck='sudo $(history -p \!\!)'
 alias upgrade="sudo apt update && sudo apt upgrade -y"
 alias update="sudo apt update && apt list --upgradeable"
-
-## useful
-alias reload_bash="source ~/.bashrc"
 alias ..="directory_up"
+alias reloadbash="source ~/.bashrc"
 alias cip="ip addr | grep -E 'inet [0-9\.]*' -o | sed -e 's/inet //' -e '/^127/d'"
 alias up="cip; python3 -m http.server 8000"
 alias clear-trash="rm -rf ~/.local/share/Trash/files && rm -rf ~/.local/share/Trash/info && echo -e '\e[31mTrash cleared!\e[39m'"
-alias update_locate="sudo updatedb"
+alias code="code ."
+
 
 ## docker
 alias dcup="docker-compose up -d"
@@ -72,4 +73,3 @@ if [ -f ~/Nextcloud/Security/.bash_sensitive ]; then
 fi
 
 ## additional
-alias code="code ."
