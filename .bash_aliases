@@ -58,7 +58,6 @@ alias up="cip; python3 -m http.server 8000"
 alias clear-trash="rm -rf ~/.local/share/Trash/files && rm -rf ~/.local/share/Trash/info && echo -e '\e[31mTrash cleared!\e[39m'"
 alias code="code ."
 
-
 ## docker
 alias dcup="docker-compose up -d"
 alias dcdw="docker-compose down"
