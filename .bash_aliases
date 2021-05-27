@@ -72,3 +72,6 @@ if [ -f ~/Nextcloud/Security/.bash_sensitive ]; then
 fi
 
 ## additional
+alias nano="nvim"
+alias vi="nvim"
+alias vim="nvim"
